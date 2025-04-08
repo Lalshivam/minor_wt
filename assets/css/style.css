@@ -1,65 +1,183 @@
 /* General Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f9;
+    background: linear-gradient(135deg, #007bff, #6c757d);
     color: #333;
 }
 
 header {
     background-color: #007bff;
     color: #fff;
-    padding: 10px 20px;
-    text-align: center;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-h1, h2, h3 {
-    color: #007bff;
+header h1 {
+    margin: 0;
+    font-size: 24px;
 }
 
+.logout-button {
+    background-color: #dc3545;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.logout-button:hover {
+    background-color: #c82333;
+}
+
+/* Container Styles */
 .container {
     width: 90%;
     margin: 20px auto;
     background: #fff;
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.container h2 {
+    font-size: 28px;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.dashboard-intro {
+    font-size: 16px;
+    color: #6c757d;
+    margin-bottom: 20px;
 }
 
 /* Graph Section */
 .graph-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 20px;
     justify-content: space-between;
 }
 
 .graph {
-    flex: 1 1 calc(33.333% - 10px);
+    flex: 1 1 calc(33.333% - 20px);
     background: #f9f9f9;
-    padding: 10px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.graph:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
 .graph canvas {
-    width: 50vh;
-    height: 200px;
-    border-radius: 8px; 
+    width: 100%;
+    height: 150px;
+    border-radius: 10px;
 }
 
-/* Buttons */
-button {
+/* Login Page Styles */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #007bff, #6c757d);
+}
+
+.login-card {
+    background: #fff;
+    color: #333;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 350px;
+}
+
+.login-card h2 {
+    margin-bottom: 10px;
+    font-size: 24px;
+    color: #007bff;
+}
+
+.login-card p {
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: #6c757d;
+}
+
+.login-card label {
+    display: block;
+    text-align: left;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #333;
+}
+
+.login-card input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.login-card input:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.login-button {
     background-color: #007bff;
     color: #fff;
     border: none;
     padding: 10px 15px;
     border-radius: 5px;
     cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    transition: background-color 0.3s ease;
 }
 
-button:hover {
+.login-button:hover {
     background-color: #0056b3;
 }
 
+/* Footer Styles */
+footer {
+    background-color: #f8f9fa;
+    color: #6c757d;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+    border-top: 1px solid #ddd;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .graph {
+        flex: 1 1 100%; /* Stack graphs vertically on smaller screens */
+    }
+
+    .login-card {
+        width: 90%; /* Adjust login card width for smaller screens */
+    }
+}

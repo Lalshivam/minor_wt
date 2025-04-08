@@ -29,22 +29,30 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hospital Dashboard</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    <h2>Hospital Dashboard</h2>
-    <a href="login.html">Logout</a>
-    <form action="hospital_dashboard.php" method="POST">
-        <label for="name">Patient Name:</label>
-        <input type="text" id="name" name="name" required>
+    <header>
+        <h1>Hospital Dashboard</h1>
+        <a href="login.html" class="logout-button">Logout</a>
+    </header>
+    <div class="container">
+        <h2>Enter Patient Details</h2>
+        <form action="hospital_dashboard.php" method="POST">
+            <label for="name">Patient Name:</label>
+            <input type="text" id="name" name="name" required>
 
-        <label for="age">Age:</label>
-        <input type="number" id="age" name="age" required>
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" required>
 
-        <label for="disease">Disease:</label>
-        <input type="text" id="disease" name="disease" required>
+            <label for="disease">Disease:</label>
+            <input type="text" id="disease" name="disease" required>
 
-        <button type="submit">Submit</button>
-    </form>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <footer>
+        <p>&copy; 2025 Healthcare System. All rights reserved.</p>
+    </footer>
 </body>
 </html>
