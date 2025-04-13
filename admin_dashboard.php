@@ -30,6 +30,12 @@ if (!isset($_SESSION['user_type']) || $_SESSION['user_type'] !== 'admin') {
             <h2>Welcome, Admin</h2>
             <p class="dashboard-intro">Here is an overview of the system's performance and data insights.</p>
 
+
+             <!-- Add New Hospital Button -->
+            <div class="action-buttons">
+                <a href="add_hospital.php" class="add-hospital-button">Add New Hospital</a>
+            </div>
+
             <!-- Graph Section -->
             <div class="graph-container">
                 <div class="graph">

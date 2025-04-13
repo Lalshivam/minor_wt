@@ -181,3 +181,70 @@ footer p {
         width: 90%; /* Adjust login card width for smaller screens */
     }
 }
+
+/* Add New Hospital Button */
+.add-hospital-button {
+    display: inline-block;
+    background-color: #28a745;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.add-hospital-button:hover {
+    background-color: #218838;
+}
+
+/* Form Styles */
+form {
+    margin-top: 20px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #333;
+}
+
+form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+form button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
+
+/* Success and Error Messages */
+.success {
+    color: #28a745;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.error {
+    color: #dc3545;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
